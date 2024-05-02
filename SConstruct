@@ -106,7 +106,7 @@ if env['CC'] == 'cl':
         ]
     )
 else:
-    env.MergeFlags('-std=c99 -D_POSIX_C_SOURCE=200809L -Wall -Wextra -Werror -Wno-unused-parameter -Wno-attributes -Wno-unused-variable')
+    env.MergeFlags('-std=c99 -D_POSIX_C_SOURCE=200809L -D_DARWIN_C_SOURCE=900000L -Wall -Wextra -Werror -Wno-unused-parameter -Wno-attributes -Wno-unused-variable')
 
 # Linker options
 if env['PLATFORM'] == 'darwin':
